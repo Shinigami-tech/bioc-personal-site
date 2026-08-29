@@ -5,70 +5,115 @@
 }
 
 body {
-    font-family: 'Segoe UI' , Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #222;
-    line-height: 1.6;
-}                                    
-               
-header { 
-    background-color: #1a1a2e;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f1a;
+    color: #eaeaea;
+    line-height: 1.7;
+} 
+
+header {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
     color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 60px 40px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffb703, #fb8500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    color: #a0a0c0;
+    margin-top: 8px;
+    font-size: 1.1em;
+}
+
+nav {
+    margin-top: 25px;
 }
 
 nav a {
-    color: white; 
+    color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin: 0 15px;
     font-weight: 500;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
 }
 
 nav a:hover {
-    color: #ffb703;
+    border-color: #ffb703;
 }
 
 section {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 h2 {
-    margin-bottom: 15px;
-    color: #1a1a2e;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffb703;
 }
 
-#projects ul {
+#projects ul, #travel ul, .contact-list {
     list-style: none;
 }
 
-#projects li {
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+#projects li, #travel li, .contact-list li {
+    background: #1a1a2e;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 3px solid #ffb703;
+    transition: transform 0.2s;
+}
+
+#projects li:hover, #travel li:hover, .contact-list li:hover {
+    transform: translateX(5px);
+}
+
+.contact-list a {
+    color: #ffb703;
+    text-decoration: none;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: #1a1a2e;
+    padding: 3px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 1px solid #0f3460;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    color: #777;
+    padding: 30px;
+    color: #666;
     font-size: 0.9em;
 }
 
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+    header h1 {
+        font-size: 2em;
     }
 
     nav a {
-        margin: 5px 10px;
+        display: inline-block;
+        margin: 5px 8px;
     }
-}
 
+}
+ 
